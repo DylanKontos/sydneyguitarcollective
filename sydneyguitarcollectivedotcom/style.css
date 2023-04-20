@@ -1,0 +1,18 @@
+body 
+{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.center 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 
+{
+    font-family: 'PixelSplitterBold', sans-serif;
+}
