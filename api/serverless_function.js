@@ -13,7 +13,7 @@ async function refreshAccessToken() {
   try {
     const { access_token } = await authClient.getAccessToken();
     console.log('Access Token:', access_token);
-    return { access_token };
+    return { accessToken: access_token }
   } catch (error) {
     console.error('Error retrieving access token:', error);
     return { error };
