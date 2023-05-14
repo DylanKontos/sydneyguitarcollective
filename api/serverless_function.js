@@ -34,7 +34,7 @@ async function createContact(firstName, lastName, email, accessToken) {
     names: [
       {
         familyName: lastName,
-        givenName": firstName
+        givenName: firstName
       },
     ],
     emailAddresses: [
