@@ -1,0 +1,16 @@
+{
+  "name": "sydney-guitar-collective",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "start": "vercel start"
+  },
+  "dependencies": {
+    "@vercel/client": "^20.0.0",
+    "google-auth-library": "^7.7.0",
+    "node-fetch": "^2.6.1"
+  }
+}
