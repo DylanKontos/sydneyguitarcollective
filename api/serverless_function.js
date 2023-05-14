@@ -25,9 +25,50 @@ async function refreshAccessToken() {
   return json.access_token;
 }
 
+async function createContact(name, email, accessToken) {
+  // Define the endpoint URL for the People API's createContact method
+  const url = 'https://people.googleapis.com/v1/people:createContact';
+
+  // Define the request body for creating a new contact
+  const requestBody = {
+    names: [
+      {
+        displayName: name,
+      },
+    ],
+    emailAddresses: [
+      {
+        value: email,
+      },
+    ],
+    memberships: [
+      {
+        contactGroupMembership: { contactGroupId: '4c16d0dd0edb4146' }
+      }
+    ]
+  };
+
+  // Define the authorization headers for the request
+  const headers = {
+    Authorization: `Bearer ${accessToken}`,
+    Content-Type: 'application/json',
+  };
+
+  // Make the API call to create the contact using the fetch function
+  const response = await fetch(url, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify(requestBody),
+  });
+
+  // Return the response as JSON
+  return response.json();
+}
+
 module.exports = async (req, res) => {
   try {
-    res.status(200).json(await refreshAccessToken());
+    const accessToken = await refreshAccessToken();    
+    res.status(200).json(await createContact("Josh Mclellan", "joshjgmclellan@gmail.com", accessToken));
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal server error');
