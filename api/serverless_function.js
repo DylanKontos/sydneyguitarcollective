@@ -72,7 +72,7 @@ module.exports = async (req, res) => {
     const lastName = req.query.lastname;
     const email = req.query.email;
     const accessToken = await refreshAccessToken();    
-    res.status(200).json(await createContact(name, email, accessToken));
+    res.status(200).json(await createContact(firstName, lastName, email, accessToken));
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal server error');
