@@ -16,7 +16,7 @@ async function refreshAccessToken() {
 
 module.exports = async (req, res) => {
   try {
-    res.status(200).json(refreshAccessToken());
+    res.status(200).send(await refreshAccessToken());
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal server error');
