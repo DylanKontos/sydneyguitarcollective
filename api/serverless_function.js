@@ -1,12 +1,18 @@
-const { Vercel } = require('@vercel/client');
-const vercel = new Vercel({ token: process.env.VERCEL_ACCESS_TOKEN });
+async function refreshAccessToken() {
+  // Use the Vercel environment variables for the client ID, client secret, and refresh token
+  const clientId = process.env.GOOGLE_CLIENT_ID;
+  const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
+
+  // Use the googleapis library to generate a new access token
+  const authClient = new google.auth.OAuth2(clientId, clientSecret);
+  const { access_token } = await authClient.getAccessToken();
+  // Return the new access token
+  return access_token;
+}
 
 module.exports = async (req, res) => {
   try {
-    const { id: projectId } = await vercel.getProject(process.env.VERCEL_PROJECT_ID);
-    const { envs } = await vercel.getEnvironmentVariables(projectId);
-    const variables = envs.reduce((acc, { key, value }) => ({ ...acc, [key]: value }), {});
-    res.status(200).json(variables);
+    res.status(200).json(refreshAccessToken());
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal server error');
