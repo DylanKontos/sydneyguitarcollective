@@ -1,5 +1,5 @@
 const { Vercel } = require('@vercel/client');
-const vercel = new Vercel({ token: process.env.VERCEL_TOKEN });
+const vercel = new Vercel({ token: process.env.VERCEL_ACCESS_TOKEN });
 
 module.exports = async (req, res) => {
   try {
