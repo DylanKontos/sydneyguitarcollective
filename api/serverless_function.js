@@ -25,7 +25,7 @@ async function refreshAccessToken() {
   return json.access_token;
 }
 
-async function createContact(name, email, accessToken) {
+async function createContact(firstName, lastName, email, accessToken) {
   // Define the endpoint URL for the People API's createContact method
   const url = 'https://people.googleapis.com/v1/people:createContact';
 
@@ -33,7 +33,8 @@ async function createContact(name, email, accessToken) {
   const requestBody = {
     names: [
       {
-        displayName: name,
+        familyName: lastName,
+        givenName": firstName
       },
     ],
     emailAddresses: [
@@ -67,7 +68,8 @@ async function createContact(name, email, accessToken) {
 
 module.exports = async (req, res) => {
   try {
-    const name = req.query.name;
+    const firstName = req.query.firstname;
+    const firstName = req.query.lastname;
     const email = req.query.email;
     const accessToken = await refreshAccessToken();    
     res.status(200).json(await createContact(name, email, accessToken));
