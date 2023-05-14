@@ -51,7 +51,7 @@ async function createContact(name, email, accessToken) {
   // Define the authorization headers for the request
   const headers = {
     Authorization: `Bearer ${accessToken}`,
-    Content-Type: 'application/json',
+    'Content-Type': 'application/json',
   };
 
   // Make the API call to create the contact using the fetch function
