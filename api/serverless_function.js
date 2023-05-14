@@ -11,12 +11,12 @@ async function refreshAccessToken() {
   authClient.setCredentials({ refresh_token: process.env.GOOGLE_REFRESH_TOKEN });
   const { access_token } = await authClient.getAccessToken();
   // Return the new access token
-  return access_token;
+  return { access_token };
 }
 
 module.exports = async (req, res) => {
   try {
-    res.status(200).send(await refreshAccessToken());
+    res.status(200).json(await refreshAccessToken());
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal server error');
