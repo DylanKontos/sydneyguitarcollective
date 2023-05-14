@@ -67,8 +67,10 @@ async function createContact(name, email, accessToken) {
 
 module.exports = async (req, res) => {
   try {
+    const name = req.query.name;
+    const email = req.query.email;
     const accessToken = await refreshAccessToken();    
-    res.status(200).json(await createContact("Josh Mclellan", "joshjgmclellan@gmail.com", accessToken));
+    res.status(200).json(await createContact(name, email, accessToken));
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal server error');
