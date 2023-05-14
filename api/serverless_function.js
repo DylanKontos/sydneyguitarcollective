@@ -69,7 +69,7 @@ async function createContact(firstName, lastName, email, accessToken) {
 module.exports = async (req, res) => {
   try {
     const firstName = req.query.firstname;
-    const firstName = req.query.lastname;
+    const lastName = req.query.lastname;
     const email = req.query.email;
     const accessToken = await refreshAccessToken();    
     res.status(200).json(await createContact(name, email, accessToken));
