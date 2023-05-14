@@ -86,7 +86,7 @@
               async function sendData() {
                 const name = encodeURIComponent(document.getElementById("name").value);
                 const email = encodeURIComponent(document.getElementById("email").value);
-                const url = `https://your-function.vercel.app/api/your-function?name=${name}&email=${email}`;
+                const url = `https://sydneyguitarcollective.vercel.app/api/serverless_function?name=${name}&email=${email}`;
                 const response = await fetch(url);
                 const data = await response.json();
                 console.log(data);
