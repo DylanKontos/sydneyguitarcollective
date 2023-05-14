@@ -8,6 +8,7 @@ async function refreshAccessToken() {
 
   // Use the googleapis library to generate a new access token
   const authClient = new OAuth2(clientId, clientSecret);
+  authClient.setCredentials({ refresh_token: process.env.GOOGLE_REFRESH_TOKEN });
   const { access_token } = await authClient.getAccessToken();
   // Return the new access token
   return access_token;
