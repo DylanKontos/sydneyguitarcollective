@@ -43,7 +43,7 @@ async function createContact(name, email, accessToken) {
     ],
     memberships: [
       {
-        contactGroupMembership: { contactGroupId: '4c16d0dd0edb4146' }
+        contactGroupMembership: { contactGroupResourceName: 'contactGroups/Mailing List' }
       }
     ]
   };
