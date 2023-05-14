@@ -4,9 +4,7 @@
   "description": "website",
   "main": "index.js",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "vercel build",
-    "start": "vercel start"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@vercel/client": "^12.5.0",
