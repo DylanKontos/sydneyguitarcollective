@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Re-enable the submit button after the operation is complete
     submitButton.disabled = false;
   });
-
+  
+  
   function showPopup(message, isSuccess) {
     const popup = document.getElementById('popup');
     popup.textContent = message;
@@ -46,16 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
       popup.style.borderColor = '#B00020'; // Dark red border
       popup.style.color = '#B00020'; // Dark red text
     }
-    
-    popup.style.position = 'fixed';
-    popup.style.left = '50%';
-    popup.style.transform = 'translateX(-50%)';
-    popup.style.width = '300px';
-    popup.style.height = '100px';
-    popup.style.padding = '20px';
-    popup.style.borderRadius = '5px';
-    popup.style.fontSize = '24px';
-    popup.style.textAlign = 'center';
 
     // Display the popup
     popup.style.display = 'block';
