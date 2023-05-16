@@ -36,7 +36,7 @@ margin-bottom: 5px;
 }
 
 .form-group input {
-  width: 150px;
+  width: 200px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -56,15 +56,4 @@ margin-bottom: 5px;
 .form-group button:hover {
   background-color: #000;
   color: #fff;
-}
-
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  display: none;
 }
