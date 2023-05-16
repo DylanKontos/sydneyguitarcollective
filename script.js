@@ -47,10 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
       popup.style.color = '#B00020'; // Dark red text
     }
 
-    // Show the popup at the bottom of the screen
-    popup.style.top = 'auto';
-    popup.style.bottom = '20px';
-
     // Display the popup
     popup.style.display = 'block';
 
