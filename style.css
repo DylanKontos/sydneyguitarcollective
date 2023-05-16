@@ -20,7 +20,7 @@ h2
 
   .form-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 20px;
     gap: 10px;
