@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     submitButton.disabled = true;
 
     // Show the loading message
-    showPopup('Processing...', true);
+    showPopup('Processing...');
 
     const firstname = encodeURIComponent(document.getElementById("firstname").value);
     const lastname = encodeURIComponent(document.getElementById("lastname").value);
@@ -24,29 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const statusCode = response.status;
 
     if (statusCode === 200) {
-      showPopup('Contact added successfully!', true);
+      showPopup('Contact added successfully!');
     } else {
-      showPopup('Failed to add contact. Please try again later.', false);
+      showPopup('Failed to add contact. Please try again later.');
     }
     // Re-enable the submit button after the operation is complete
     submitButton.disabled = false;
   });
   
   
-  function showPopup(message, isSuccess) {
+  function showPopup(message) {
     const popup = document.getElementById('popup');
     popup.textContent = message;
-
-    // Apply styles based on success or failure
-    if (isSuccess) {
-      popup.style.backgroundColor = '#C8FACD'; // Light green background
-      popup.style.borderColor = '#258746'; // Dark green border
-      popup.style.color = '#258746'; // Dark green text
-    } else {
-      popup.style.backgroundColor = '#FFD9D9'; // Light red background
-      popup.style.borderColor = '#B00020'; // Dark red border
-      popup.style.color = '#B00020'; // Dark red text
-    }
 
     // Display the popup
     popup.style.display = 'block';
