@@ -62,8 +62,8 @@ async function createContact(firstName, lastName, email, accessToken) {
     body: JSON.stringify(requestBody),
   });
 
-  // Return the response as JSON
-  return response.json();
+  // Return the response
+  return response;
 }
 
 module.exports = async (req, res) => {
@@ -71,8 +71,9 @@ module.exports = async (req, res) => {
     const firstName = req.query.firstname;
     const lastName = req.query.lastname;
     const email = req.query.email;
-    const accessToken = await refreshAccessToken();    
-    res.status(200).json(await createContact(firstName, lastName, email, accessToken));
+    const accessToken = await refreshAccessToken();
+    const funcResponse = await createContact(firstName, lastName, email, accessToken);
+    res.status(funcResponse.status).json(funcResponse.json());
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal server error');
