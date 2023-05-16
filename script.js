@@ -50,12 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
     popup.style.position = 'fixed';
     popup.style.left = '50%';
     popup.style.transform = 'translateX(-50%)';
-    popup.style.width = '300px'; /* Adjust width as needed */
-    popup.style.height = '100px'; /* Adjust height as needed */
+    popup.style.width = '300px';
+    popup.style.height = '100px';
     popup.style.padding = '20px';
-    popup.style.border-radius = '5px';
-    popup.style.font-size = '24px'; /* Adjust font size as needed */
-    popup.style.text-align = 'center';
+    popup.style.borderRadius = '5px';
+    popup.style.fontSize = '24px';
+    popup.style.textAlign = 'center';
 
     // Display the popup
     popup.style.display = 'block';
