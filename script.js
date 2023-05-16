@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     submitButton.disabled = true;
 
     // Show the loading message
-    showPopup('Processing...');
+    showPopup('Processing...', true);
 
     const firstname = encodeURIComponent(document.getElementById("firstname").value);
     const lastname = encodeURIComponent(document.getElementById("lastname").value);
