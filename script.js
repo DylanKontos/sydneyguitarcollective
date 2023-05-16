@@ -46,6 +46,16 @@ document.addEventListener('DOMContentLoaded', () => {
       popup.style.borderColor = '#B00020'; // Dark red border
       popup.style.color = '#B00020'; // Dark red text
     }
+    
+    popup.style.position = 'fixed';
+    popup.style.left = '50%';
+    popup.style.transform = 'translateX(-50%)';
+    popup.style.width = '300px'; /* Adjust width as needed */
+    popup.style.height = '100px'; /* Adjust height as needed */
+    popup.style.padding = '20px';
+    popup.style.border-radius = '5px';
+    popup.style.font-size = '24px'; /* Adjust font size as needed */
+    popup.style.text-align = 'center';
 
     // Display the popup
     popup.style.display = 'block';
