@@ -74,7 +74,7 @@ export default async (req, res) => {
       res.setHeader('Access-Control-Allow-Methods', 'POST');
       res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
       res.status(200).end();
-    } else if (req.method === 'POST') {
+    } else if (req.method === 'GET') {
       const firstName = req.query.firstname;
       const lastName = req.query.lastname;
       const email = req.query.email;
