@@ -78,6 +78,7 @@ export default async (req, res) => {
     res.status(funcResponse.status).json(funcResponse.json());
   } catch (error) {
     console.error(error);
+    res.setHeader('Access-Control-Allow-Origin', 'https://www.sydneyguitarcollective.com');
     res.status(500).send('Internal server error');
   }
 };
