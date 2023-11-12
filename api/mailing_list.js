@@ -71,7 +71,9 @@ export default async (req, res) => {
     const firstName = req.query.firstname;
     const lastName = req.query.lastname;
     const email = req.query.email;
+    console.log(email);
     const accessToken = await refreshAccessToken();
+    console.log(accessToken);
     const funcResponse = await createContact(firstName, lastName, email, accessToken);
     
     res.setHeader('Access-Control-Allow-Origin', 'https://www.sydneyguitarcollective.com');
