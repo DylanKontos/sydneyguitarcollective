@@ -77,7 +77,7 @@ export default async (req, res) => {
     const funcResponse = await createContact(firstName, lastName, email, accessToken);
     
     res.setHeader('Access-Control-Allow-Origin', 'https://www.sydneyguitarcollective.com');
-    res.status(funcResponse.status).json(funcResponse.json());
+    res.status(funcResponse.status).json(await funcResponse.json());
   } catch (error) {
     console.error(error);
     res.setHeader('Access-Control-Allow-Origin', 'https://www.sydneyguitarcollective.com');
