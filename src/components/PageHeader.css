@@ -1,0 +1,93 @@
+/* Common Styles */
+.PageHeader {
+    position: fixed;
+    top: 0; /* Stick it to the top */
+    max-height: 70px;
+    width: 100vw;
+    display: grid;
+    grid-template-areas: "logo nav";
+    /* Cosmetics */
+    background-color: #282c34;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .Logo {
+    grid-area: logo;
+    height: 70px;
+  }
+  
+  .Nav {
+    display: grid;
+    grid-area: nav;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .Nav a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+  
+  .Nav a:hover {
+    transform: scale(1.1);
+  }
+  
+  .Burger {
+    display: none;
+    grid-area: burger;
+    margin: 0 20px 0 0;
+    padding: 0;
+    justify-self: end;
+    font-size: 40px;
+    border: none;
+    background: none;
+    outline: none;
+    transition: 0.1s;
+  }
+  
+  .Burger:active {
+    transform: scale(1.2);
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 700px) {
+    .PageHeader {
+      grid-template-areas: "logo nav";
+      grid-template-columns: auto auto;
+      align-items: center;
+      padding: 0 0px;
+    }
+  
+    .Nav {
+      grid-area: nav;
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      align-items: center;
+      justify-items: center;
+      padding-left: 0px;
+    }
+  
+    .Logo {
+      display: block;
+      grid-area: logo;
+      padding: 0px;
+    }
+  
+    .Nav a {
+      display: block;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 7px;
+      text-align: center;
+    }
+  
+    .Nav a:hover {
+      background-color: #c9c3d7;
+    }
+  }
+  
