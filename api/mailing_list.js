@@ -62,22 +62,30 @@ async function createContact(firstName, lastName, email, accessToken) {
     body: JSON.stringify(requestBody),
   });
 
-  response.setHeader('Access-Control-Allow-Origin', '*'); // Adjust the origin accordingly
-  response.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  response.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-
   // Return the response
   return response;
 }
 
 export default async (req, res) => {
   try {
-    const firstName = req.query.firstname;
-    const lastName = req.query.lastname;
-    const email = req.query.email;
-    const accessToken = await refreshAccessToken();
-    const funcResponse = await createContact(firstName, lastName, email, accessToken);
-    res.status(funcResponse.status).json(funcResponse.json());
+    if (req.method === 'OPTIONS') {
+      // Respond to CORS preflight requests
+      res.setHeader('Access-Control-Allow-Origin', 'https://www.sydneyguitarcollective.com');
+      res.setHeader('Access-Control-Allow-Methods', 'POST');
+      res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+      res.status(200).end();
+    } else if (req.method === 'POST') {
+      const firstName = req.query.firstname;
+      const lastName = req.query.lastname;
+      const email = req.query.email;
+      const accessToken = await refreshAccessToken();
+      const funcResponse = await createContact(firstName, lastName, email, accessToken);
+      
+      res.setHeader('Access-Control-Allow-Origin', '*'); // Adjust the origin accordingly
+      res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+      res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+      res.status(funcResponse.status).json(funcResponse.json());
+    }
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal server error');
