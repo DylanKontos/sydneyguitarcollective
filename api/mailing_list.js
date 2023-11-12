@@ -62,6 +62,10 @@ async function createContact(firstName, lastName, email, accessToken) {
     body: JSON.stringify(requestBody),
   });
 
+  response.setHeader('Access-Control-Allow-Origin', '*'); // Adjust the origin accordingly
+  response.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  response.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
   // Return the response
   return response;
 }
