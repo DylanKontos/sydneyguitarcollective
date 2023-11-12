@@ -1,5 +1,0 @@
-# sydneyguitarcollective
-
-
-
-hello world!
