@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './MailingListForm.css';
 
 function MailingListForm() {
   const [firstName, setFirstName] = useState('');
@@ -6,11 +7,11 @@ function MailingListForm() {
   const [email, setEmail] = useState('');
   const [popupMessage, setPopupMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Disable the submit button to prevent multiple submissions
     setIsLoading(true);
 
     const encodedFirstName = encodeURIComponent(firstName);
@@ -32,11 +33,12 @@ function MailingListForm() {
       setPopupMessage('An error occurred. Please try again later.');
     }
 
-    // Re-enable the submit button after the operation is complete
     setIsLoading(false);
 
-    // Hide the popup after a certain duration (e.g., 3 seconds)
+    setIsPopupVisible(true);
+
     setTimeout(() => {
+      setIsPopupVisible(false);
       setPopupMessage('');
     }, 3000);
   };
@@ -91,9 +93,9 @@ function MailingListForm() {
           </div>
         </form>
       </div>
-      {popupMessage && (
-        <div id="popup" className="popup">
-          {popupMessage}
+      {isPopupVisible && (
+        <div className={`popup ${isPopupVisible ? 'popup-visible' : ''}`}>
+            {popupMessage}
         </div>
       )}
     </div>
