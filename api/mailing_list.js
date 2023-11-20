@@ -6,6 +6,10 @@ async function refreshAccessToken() {
   const clientId = process.env.GOOGLE_CLIENT_ID;
   const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
   const refreshToken = process.env.GOOGLE_REFRESH_TOKEN;
+  
+  console.log('clientId:', clientId);
+  console.log('clientSecret:', clientSecret);
+  console.log('refreshToken:', refreshToken);
 
   // Set up the request parameters
   const url = 'https://oauth2.googleapis.com/token';
