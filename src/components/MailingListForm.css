@@ -1,0 +1,40 @@
+/* MailingListForm.css */
+
+.form-container {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 5px solid #c9c3d7;
+    padding: 20px;
+    width: 300px;
+    font-size: 18px;
+    font-family: 'PixelSplitterBold', sans-serif;
+    text-align: center;
+    display: none;
+    color: #0b0e27;
+  }
+  
+  .popup-visible {
+    display: block;
+  }
