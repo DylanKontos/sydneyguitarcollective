@@ -11,20 +11,6 @@ const EventsPage = () => {
                 style={{ width: '50%', height: 'auto', minWidth: '350px' }}
                 alt="Mosman Concert"
             /> 
-            <h2 style={{ color: '#cce3f1' }}>Tickets available here: </h2>
-            <a
-            href="https://events.humanitix.com/sydney-guitar-collective"
-            style={{
-                textDecoration: 'none',
-                color: '#fff',
-                backgroundColor: '#007bff',
-                padding: '10px 20px',
-                borderRadius: '5px',
-                display: 'inline-block',
-            }}
-            >
-            Get Tickets on Humanitix
-            </a>
             </div>
         </div>
     );
