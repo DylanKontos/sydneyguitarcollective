@@ -32,6 +32,11 @@ const HeadshotSection = () => {
         description: 'is currently in his 5th year of a Bachelor of Music/Education (Secondary) at UNSW. He has studied under Dr. Josinaldo Costa for 3 years and attained an AMEB Grade 7 with a high distinction. Dylan continues to progress his solo and ensemble playing as a founding member of 4-Bit Guitar and as a member of the UNSW Classical Guitar Ensemble for 4 years.',
         imageUrl: require('../assets/Dylan.jpg'),
     },
+    {
+        name: 'Manuel Diewald',
+        description: 'is a Sydney-based guitarist who holds a Bachelor of Music (Honours) with Honours Class 1 in Music pedagogy from the University of New South Wales (UNSW). He has many years of Solo, Ensemble, Guitar Quartet, and Guitar and Flute Duo performance experience with performances in Australia and a debut concert in Vienna, Austria in 2020. Manuel has completed his A.Mus.A, Associate in Music Performance in the Subject of Classical Guitar.',
+        imageUrl: require('../assets/Manuel.jpg'),
+    }
   ];
 
   return (
