@@ -5,6 +5,26 @@ const EventsPage = () => {
         <div className="Events">
             <div>
             <h1>Events</h1>
+            <h2 style={{ color: '#cce3f1' }}>Upcoming: </h2> 
+            <img
+                src={require("../assets/IntrusionsPromo.JPG")}
+                style={{ width: '50%', height: 'auto', minWidth: '350px' }}
+                alt="Mosman Concert"
+            /> 
+            <h2 style={{ color: '#cce3f1' }}>Tickets available here: </h2>
+            <a
+            href="https://events.humanitix.com/sydney-guitar-collective___intrusions___"
+            style={{
+                textDecoration: 'none',
+                color: '#fff',
+                backgroundColor: '#007bff',
+                padding: '10px 20px',
+                borderRadius: '5px',
+                display: 'inline-block',
+            }}
+            >
+            Get Tickets on Humanitix
+            </a>
             <h2 style={{ color: '#cce3f1' }}>Past: </h2> 
             <img
                 src={require("../assets/mosmanpromo.JPG")}
