@@ -7,7 +7,7 @@ const EventsPage = () => {
             <h1>Events</h1>
             <h2 style={{ color: '#cce3f1' }}>Upcoming: </h2> 
             <img
-                src={require("../assets/IntrusionsPromo.JPG")}
+                src={require("../assets/IntrusionsPromo.jpg")}
                 style={{ width: '50%', height: 'auto', minWidth: '350px' }}
                 alt="Mosman Concert"
             /> 
