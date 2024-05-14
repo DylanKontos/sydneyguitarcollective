@@ -2,92 +2,107 @@
 .PageHeader {
     position: fixed;
     top: 0; /* Stick it to the top */
-    max-height: 70px;
+    max-height: 100px;
     width: 100vw;
     display: grid;
-    grid-template-areas: "logo nav";
+    grid-template-areas: "nav span logo";
+    grid-template-columns: auto 1fr auto; /* Adjust grid-template-columns */
     /* Cosmetics */
-    background-color: #282c34;
+    background-color: #A6785D;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
   
   .Logo {
     grid-area: logo;
-    height: 70px;
+    height: 100px;
+    justify-self: end;
+    padding-right: 50px;
   }
-  
-  .Nav {
-    display: grid;
-    grid-area: nav;
-    grid-template-columns: repeat(4, auto);
-    align-items: center;
-    justify-items: center;
-  }
-  
-  .Nav a {
-    color: #fff;
-    font-size: 20px;
+
+  .Title {
+    color: #270E16;
+    font-size: calc(40px + 0.390625vw);
     font-weight: 500;
     transition: 0.5s;
     text-decoration: none;
+    align-items: center;
+    justify-items: center;
+    grid-area: span;
+    display: grid;
   }
   
-  .Nav a:hover {
-    transform: scale(1.1);
+  .Nav {
+    display: flex;
+    grid-area: nav;
   }
-  
-  .Burger {
-    display: none;
-    grid-area: burger;
-    margin: 0 20px 0 0;
-    padding: 0;
-    justify-self: end;
-    font-size: 40px;
+
+  .NavButton {
+    position: relative; /* Ensure relative positioning */
+    z-index: 0; /* Ensure the buttons appear below the Title */
+    padding: 20px 60px;
+    background-color: transparent;
     border: none;
-    background: none;
-    outline: none;
-    transition: 0.1s;
+    color: #270E16;
+    font-size: calc(15px + 0.390625vw);
+    font-weight: 500;
+    transition: background-color 0.5s, color 0.5s;
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
+    justify-items: center;
+    display: grid;
   }
   
-  .Burger:active {
-    transform: scale(1.2);
+  .NavButton:hover {
+    background-color: #570B24;
+    color: #F2E1C1;
   }
+  
+  .NavButton.active {
+    background-color: #570B24;
+    color: #F2E1C1;
+  }
+
   
   /* Mobile Styles */
   @media (max-width: 700px) {
     .PageHeader {
-      grid-template-areas: "logo nav";
+      grid-template-areas: "nav logo";
       grid-template-columns: auto auto;
       align-items: center;
       padding: 0 0px;
     }
   
-    .Nav {
+    .NavButton {
       grid-area: nav;
       display: grid;
       grid-template-columns: repeat(4, auto);
       align-items: center;
       justify-items: center;
       padding-left: 0px;
-    }
-  
-    .Logo {
       display: block;
-      grid-area: logo;
-      padding: 0px;
-    }
-  
-    .Nav a {
-      display: block;
-      color: #fff;
+      color: #270E16;
       font-size: 18px;
       font-weight: 500;
       padding: 7px;
       text-align: center;
     }
   
-    .Nav a:hover {
-      background-color: #c9c3d7;
+    .Logo {
+      display: block;
+      grid-area: logo;
+      padding: 0px;
+      justify-self: end;
+      padding-right: 10px;
+    }
+  
+    .NavButton:hover {
+      background-color: #570B24;
+      color: #F2E1C1;
+    }
+    
+    .NavButton.active {
+      background-color: #570B24;
+      color: #F2E1C1;
     }
   }
-  
