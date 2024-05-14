@@ -65,43 +65,44 @@
   
 /* Mobile Styles */
 @media (max-width: 700px) {
-.PageHeader {
-  grid-template-areas: "nav logo";
-  grid-template-columns: auto auto;
-  align-items: center;
-  padding: 0 0px;
-}
+  .PageHeader {
+    grid-template-areas: "nav logo";
+    grid-template-columns: auto auto;
+    align-items: center;
+    padding: 0 10px; /* Adjust padding as needed */
+  }
 
-.NavButton {
-  grid-area: nav;
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  align-items: center;
-  justify-items: center;
-  padding-left: 0px;
-  display: block;
-  color: #270E16;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 7px;
-  text-align: center;
-}
+  .NavButton {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    justify-items: center;
+    padding-left: 0px;
+    color: #270E16;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 7px;
+    text-align: center;
+  }
 
-.Logo {
-  display: block;
-  grid-area: logo;
-  padding: 0px;
-  justify-self: end;
-  padding-right: 10px;
-}
+  .Logo {
+    display: block;
+    grid-area: logo;
+    height: auto; /* Allow the height to adjust based on width */
+    width: 130px; /* Adjust the width as needed */
+    justify-self: end;
+    padding-right: 10px;
+  }
 
-.NavButton:hover {
-  background-color: #570B24;
-  color: #F2E1C1;
+  .NavButton:hover {
+    background-color: #570B24;
+    color: #F2E1C1;
+  }
+  
+  .NavButton.active {
+    background-color: #570B24;
+    color: #F2E1C1;
+  }
 }
-
-.NavButton.active {
-  background-color: #570B24;
-  color: #F2E1C1;
-}
-}
+  
