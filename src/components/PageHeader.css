@@ -90,7 +90,8 @@
     display: block;
     grid-area: logo;
     height: auto; /* Allow the height to adjust based on width */
-    width: 130px; /* Adjust the width as needed */
+    width: 20vw; /* Adjust the width as a percentage of the viewport width */
+    max-width: 130px; /* Set a maximum width to prevent it from becoming too large on larger screens */
     justify-self: end;
     padding-right: 10px;
   }
