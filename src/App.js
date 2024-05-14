@@ -13,7 +13,6 @@ function App() {
   return (
     <Router>
       <PageHeader />
-      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
