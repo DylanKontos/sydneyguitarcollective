@@ -1,108 +1,107 @@
 /* Common Styles */
 .PageHeader {
-    position: fixed;
-    top: 0; /* Stick it to the top */
-    max-height: 100px;
-    width: 100vw;
-    display: grid;
-    grid-template-areas: "nav span logo";
-    grid-template-columns: auto 1fr auto; /* Adjust grid-template-columns */
-    /* Cosmetics */
-    background-color: #A6785D;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  .Logo {
-    grid-area: logo;
-    height: 100px;
-    justify-self: end;
-    padding-right: 50px;
-  }
+  position: fixed;
+  top: 0;
+  max-height: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "nav span logo";
+  grid-template-columns: auto 1fr auto;
+  background-color: #A6785D;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
-  .Title {
-    color: #270E16;
-    font-size: calc(40px + 0.390625vw);
-    font-weight: 500;
-    transition: 0.5s;
-    text-decoration: none;
-    align-items: center;
-    justify-items: center;
-    grid-area: span;
-    display: grid;
-  }
-  
-  .Nav {
-    display: flex;
-    grid-area: nav;
-  }
+.Logo {
+  grid-area: logo;
+  max-height: 100px;
+  justify-self: end;
+  padding-right: 2vw; /* Adjust based on viewport width */
+}
 
-  .NavButton {
-    position: relative; /* Ensure relative positioning */
-    z-index: 0; /* Ensure the buttons appear below the Title */
-    padding: 20px 60px;
-    background-color: transparent;
-    border: none;
-    color: #270E16;
-    font-size: calc(15px + 0.390625vw);
-    font-weight: 500;
-    transition: background-color 0.5s, color 0.5s;
-    text-decoration: none;
-    cursor: pointer;
-    align-items: center;
-    justify-items: center;
-    display: grid;
-  }
-  
-  .NavButton:hover {
-    background-color: #570B24;
-    color: #F2E1C1;
-  }
-  
-  .NavButton.active {
-    background-color: #570B24;
-    color: #F2E1C1;
-  }
+.Title {
+  color: #270E16;
+  font-size: calc(1.6vw + 20px); /* Responsive font size */
+  font-weight: 500;
+  transition: 0.5s;
+  text-decoration: none;
+  align-items: center;
+  justify-items: center;
+  grid-area: span;
+  display: grid;
+}
+
+.Nav {
+  display: flex;
+  grid-area: nav;
+}
+
+.NavButton {
+  position: relative;
+  z-index: 0;
+  padding: 2vh 3vw; /* Adjust based on viewport size */
+  background-color: transparent;
+  border: none;
+  color: #270E16;
+  font-size: calc(0.8vw + 15px); /* Responsive font size */
+  font-weight: 500;
+  transition: background-color 0.5s, color 0.5s;
+  text-decoration: none;
+  cursor: pointer;
+  align-items: center;
+  justify-items: center;
+  display: grid;
+}
+
+.NavButton:hover {
+  background-color: #570B24;
+  color: #F2E1C1;
+}
+
+.NavButton.active {
+  background-color: #570B24;
+  color: #F2E1C1;
+}
 
   
-  /* Mobile Styles */
-  @media (max-width: 700px) {
-    .PageHeader {
-      grid-template-areas: "nav logo";
-      grid-template-columns: auto auto;
-      align-items: center;
-      padding: 0 0px;
-    }
-  
-    .NavButton {
-      grid-area: nav;
-      display: grid;
-      grid-template-columns: repeat(4, auto);
-      align-items: center;
-      justify-items: center;
-      padding-left: 0px;
-      display: block;
-      color: #270E16;
-      font-size: 18px;
-      font-weight: 500;
-      padding: 7px;
-      text-align: center;
-    }
-  
-    .Logo {
-      display: block;
-      grid-area: logo;
-      padding: 0px;
-      justify-self: end;
-      padding-right: 10px;
-    }
-  
-    .NavButton:hover {
-      background-color: #570B24;
-      color: #F2E1C1;
-    }
-    
-    .NavButton.active {
-      background-color: #570B24;
-      color: #F2E1C1;
-    }
-  }
+/* Mobile Styles */
+@media (max-width: 700px) {
+.PageHeader {
+  grid-template-areas: "nav logo";
+  grid-template-columns: auto auto;
+  align-items: center;
+  padding: 0 0px;
+}
+
+.NavButton {
+  grid-area: nav;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  justify-items: center;
+  padding-left: 0px;
+  display: block;
+  color: #270E16;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 7px;
+  text-align: center;
+}
+
+.Logo {
+  display: block;
+  grid-area: logo;
+  padding: 0px;
+  justify-self: end;
+  padding-right: 10px;
+}
+
+.NavButton:hover {
+  background-color: #570B24;
+  color: #F2E1C1;
+}
+
+.NavButton.active {
+  background-color: #570B24;
+  color: #F2E1C1;
+}
+}
