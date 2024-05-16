@@ -19,13 +19,11 @@ const VideosPage = () => {
                 <YouTubeEmbed url="https://www.youtube.com/watch?v=1zX7JpHvJyM" />
                 <p style={{ fontSize: '20px'}}> Richard Charlton - ‘Manta Ray Ballet’ From Five Tails in Cold Blood</p>
                 <br/>
-                <h3 style={{ color: '#cce3f1' }}>More videos on our YouTube channel here: </h3>
+                <h3>More videos on our YouTube channel here: </h3>
                 <a
                 href="https://www.youtube.com/@SydneyGuitarCollective"
                 style={{
                     textDecoration: 'bold',
-                    color: '#fff',
-                    backgroundColor: '#FF0000',
                     padding: '10px 20px',
                     borderRadius: '5px',
                     display: 'inline-block',
