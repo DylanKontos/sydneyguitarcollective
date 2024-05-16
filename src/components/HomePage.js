@@ -2,8 +2,10 @@ import React from 'react';
 import PageContentWithPadding from './PageContentWithPadding';
 
 const HomePage = () => {
+    const headerHeight = `${window.innerHeight * 0.15}px`; // Example: 15% of viewport height in pixels
+
     return (
-        <PageContentWithPadding>
+        <PageContentWithPadding headerHeight={headerHeight}>
             <div className="App">
                 <div>
                 <h2>The Premier Young Classical Guitar Ensemble based in Sydney, Australia</h2>
