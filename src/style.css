@@ -15,13 +15,25 @@ body
 
 h2 
 {
-    font-family: 'PixelSplitterBold', sans-serif;
+    font-family: 'Forma DJR Micro', sans-serif;
     text-align: center;
+    color: #270E16;
+}
+
+h3
+{
+    color: #270E16;
 }
 
 p
 {
-  color: #270E16;
+    color: #270E16;;
+}
+
+a
+{
+    background-color: #570B24;
+    color: #F2E1C1;
 }
 
 .form-container {
