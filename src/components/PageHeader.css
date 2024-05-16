@@ -4,6 +4,7 @@
   top: 0;
   width: 100vw;
   height: 15vh;
+  max-height: 100px; /* Maximum height for larger screens */
   display: grid;
   grid-template-areas: "nav span logo";
   grid-template-columns: auto 1fr auto;
