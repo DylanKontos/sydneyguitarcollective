@@ -2,8 +2,8 @@
 .PageHeader {
   position: fixed;
   top: 0;
-  max-height: 100px;
-  width: 100%;
+  width: 100vw;
+  height: 10vh;
   display: grid;
   grid-template-areas: "nav span logo";
   grid-template-columns: auto 1fr auto;
@@ -13,16 +13,17 @@
 
 .Logo {
   grid-area: logo;
-  max-height: 100px;
+  max-height: 100%; /* Adjust as needed */
+  min-height: 60px; /* Adjust as needed */
+  height: 15vh; /* Adjust as needed */
   justify-self: end;
   padding-right: 2vw; /* Adjust based on viewport width */
 }
 
 .Title {
   color: #270E16;
-  font-size: calc(1.6vw + 20px); /* Responsive font size */
+  font-size: calc(1.6vw + 20px); /* Responsive font size based on viewport size */
   font-weight: 500;
-  transition: 0.5s;
   text-decoration: none;
   align-items: center;
   justify-items: center;
@@ -106,4 +107,3 @@
     color: #F2E1C1;
   }
 }
-  
