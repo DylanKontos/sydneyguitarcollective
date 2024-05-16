@@ -2,8 +2,8 @@ body
 {
     margin: auto;
     text-align: center;
-    background-color: #0b0e27;
-    color: #c9c3d7;
+    background-color: #F2E1C1;
+    color: #270E16;
     font-size: calc(15px + 0.390625vw);
 }
 .center 
@@ -21,7 +21,7 @@ h2
 
 p
 {
-  color: #cce3f1;
+  color: #270E16;
 }
 
 .form-container {
