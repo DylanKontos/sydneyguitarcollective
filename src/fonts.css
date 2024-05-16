@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Forma DJR Micro';
+    src: url('./fonts/FormaDJRMicro.ttf') format('truetype');
+    /* You can add additional src declarations for other font file formats if necessary */
+    font-weight: normal;
+    font-style: normal;
+}
