@@ -4,8 +4,10 @@ import HeadshotSection from './HeadshotSection';
 import PageContentWithPadding from './PageContentWithPadding';
 
 const AboutPage = () => {
+    const headerHeight = `${window.innerHeight * 0.15}px`; // Example: 15% of viewport height in pixels
+
     return (
-        <PageContentWithPadding>
+        <PageContentWithPadding headerHeight={headerHeight}>
             <div className="About">
                 <h1>About</h1>
                 <div>
