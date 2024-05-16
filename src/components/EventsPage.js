@@ -2,8 +2,10 @@ import React from 'react';
 import PageContentWithPadding from './PageContentWithPadding';
 
 const EventsPage = () => {
+    const headerHeight = `${window.innerHeight * 0.15}px`; // Example: 15% of viewport height in pixels
+
     return (
-        <PageContentWithPadding>
+        <PageContentWithPadding headerHeight={headerHeight}>
             <div className="Events">
                 <div>
                 <h1>Events</h1>
