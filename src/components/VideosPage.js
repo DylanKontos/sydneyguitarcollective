@@ -3,8 +3,10 @@ import YouTubeEmbed from './YoutubeEmbed';
 import PageContentWithPadding from './PageContentWithPadding';
 
 const VideosPage = () => {
+    const headerHeight = `${window.innerHeight * 0.15}px`; // Example: 15% of viewport height in pixels
+
     return (
-        <PageContentWithPadding>
+        <PageContentWithPadding headerHeight={headerHeight}>
             <div className="Videos">
                 <h1>Videos</h1>
                 <div>
