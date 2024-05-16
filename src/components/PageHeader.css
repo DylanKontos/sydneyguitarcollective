@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   width: 100vw;
-  height: 10vh;
+  height: 15vh;
   display: grid;
   grid-template-areas: "nav span logo";
   grid-template-columns: auto 1fr auto;
