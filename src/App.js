@@ -1,6 +1,6 @@
 import './style.css';
+import './fonts.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
 import PageHeader from './components/PageHeader';
 import Footer from './components/Footer';
 import HomePage from './components/HomePage';
@@ -13,7 +13,6 @@ function App() {
   return (
     <Router>
       <PageHeader />
-      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />

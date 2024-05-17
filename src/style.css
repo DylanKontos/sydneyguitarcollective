@@ -2,8 +2,8 @@ body
 {
     margin: auto;
     text-align: center;
-    background-color: #0b0e27;
-    color: #c9c3d7;
+    background-color: #F2E1C1;
+    color: #270E16;
     font-size: calc(15px + 0.390625vw);
 }
 .center 
@@ -15,13 +15,25 @@ body
 
 h2 
 {
-    font-family: 'PixelSplitterBold', sans-serif;
+    font-family: 'Forma DJR Micro', sans-serif;
     text-align: center;
+    color: #270E16;
+}
+
+h3
+{
+    color: #270E16;
 }
 
 p
 {
-  color: #cce3f1;
+    color: #270E16;;
+}
+
+a
+{
+    background-color: #570B24;
+    color: #F2E1C1;
 }
 
 .form-container {

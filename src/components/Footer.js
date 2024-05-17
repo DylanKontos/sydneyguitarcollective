@@ -15,10 +15,16 @@ function Footer() {
         </h3>
     </b>
       <div className="custom-icons">
-          <a href="https://www.facebook.com/profile.php?id=100094293114454">
+          <a href="https://www.facebook.com/profile.php?id=100094293114454"
+          style={{
+              backgroundColor: '#F2E1C1',
+          }}>
             <img src={facebookIcon} alt="Facebook Icon" />
           </a>
-          <a href="https://www.instagram.com/sydneyguitarcollective/">
+          <a href="https://www.instagram.com/sydneyguitarcollective/"
+          style={{
+              backgroundColor: '#F2E1C1',
+          }}>
             <img src={instagramIcon} alt="Instagram Icon" />
           </a>
         </div>
