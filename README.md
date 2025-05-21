@@ -1,4 +1,3 @@
-# Sydney Guitar Collective website
+*No logner hosted from this repo
 
-hosted at [https://www.sydneyguitarcollective.com](https://www.sydneyguitarcollective.com)
-
+Previously hosted @ at [https://www.sydneyguitarcollective.com](https://www.sydneyguitarcollective.com)
